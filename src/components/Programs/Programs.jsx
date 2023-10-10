@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Programs.css"
-import {programsData} from "../../data/programsData"
-import {right_arrow} from "../../assets/rightArrow.png"
+import ProgramsData from "../../data/programsData"
+import RightArrow from "../../assets/rightArrow.png"
 
 const Programs = () => {
   return (
@@ -14,14 +14,14 @@ const Programs = () => {
         </div>
 
         <div className='programs-categories'>
-            {programsData.map((programs)=>(
+            {ProgramsData.map((programs)=>(
                 <div className='category'>
                     {programs.image}
                     <span>{programs.heading}</span>
                     <span>{programs.details}</span>
                     <div className='join-now'>
                         <span>Join Now</span>
-                        <img src={right_arrow} alt=''/>
+                        <img src={RightArrow} alt=''/>
                     </div>
                 </div>
                 
@@ -32,4 +32,4 @@ const Programs = () => {
   )
 }
 
-export default Programs
+export default Programs;
